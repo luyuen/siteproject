@@ -16,7 +16,7 @@ import javax.persistence.Table;
 @Table(name = "member")
 
 
-public class Member implements Serializable {
+public class Message implements Serializable {
 	
 	/**
 	 * 序列化

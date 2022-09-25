@@ -15,32 +15,32 @@ public class MemberService {
 	@Autowired
 	private MemberRepository memberRepository;
 	
-	public Member insert(Member member ) {
+	public Message insert(Message member ) {
 		return memberRepository.save(member);
 	}
 	
 	public boolean delete(int member_id) {
-		Optional<Member> id = memberRepository.findById(member_id);
+		Optional<Message> id = memberRepository.findById(member_id);
 		if(id.isPresent()) {
 			memberRepository.deleteById(member_id);
 			return true;
 		}
 		return false;
 	}
-	public boolean update(int member_id, Member member) {
-		Optional<Member> id = memberRepository.findById(member_id);
+	public boolean update(int member_id, Message member) {
+		Optional<Message> id = memberRepository.findById(member_id);
 		if(id.isPresent()) {
 			memberRepository.save(member);
 			return true;
 		}
 		return false;
 	}
-	public List<Member> queryAll(){
+	public List<Message> queryAll(){
 		return memberRepository.findAll();
 	}
 	
-	public Member queryBYId(int member_id) {
-		Optional<Member> id = memberRepository.findById(member_id);
+	public Message queryBYId(int member_id) {
+		Optional<Message> id = memberRepository.findById(member_id);
 		
 		if(id.isPresent()) {
 			return id.get();
