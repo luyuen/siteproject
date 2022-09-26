@@ -12,22 +12,22 @@ import org.springframework.data.repository.query.FluentQuery.FetchableFluentQuer
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class MemberRepository implements MemberInterface<Message> {
+public class MemberRepository implements MemberInterface<Member> {
 
 	@Override
-	public Page<Message> findAll(Pageable pageable) {
+	public Page<Member> findAll(Pageable pageable) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public <S extends Message> S save(S entity) {
+	public <S extends Member> S save(S entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Optional<Message> findById(Integer id) {
+	public Optional<Member> findById(Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -51,7 +51,7 @@ public class MemberRepository implements MemberInterface<Message> {
 	}
 
 	@Override
-	public void delete(Message entity) {
+	public void delete(Member entity) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -63,7 +63,7 @@ public class MemberRepository implements MemberInterface<Message> {
 	}
 
 	@Override
-	public void deleteAll(Iterable<? extends Message> entities) {
+	public void deleteAll(Iterable<? extends Member> entities) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -75,55 +75,55 @@ public class MemberRepository implements MemberInterface<Message> {
 	}
 
 	@Override
-	public <S extends Message> Optional<S> findOne(Example<S> example) {
+	public <S extends Member> Optional<S> findOne(Example<S> example) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public <S extends Message> Page<S> findAll(Example<S> example, Pageable pageable) {
+	public <S extends Member> Page<S> findAll(Example<S> example, Pageable pageable) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public <S extends Message> long count(Example<S> example) {
+	public <S extends Member> long count(Example<S> example) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public <S extends Message> boolean exists(Example<S> example) {
+	public <S extends Member> boolean exists(Example<S> example) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public <S extends Message, R> R findBy(Example<S> example, Function<FetchableFluentQuery<S>, R> queryFunction) {
+	public <S extends Member, R> R findBy(Example<S> example, Function<FetchableFluentQuery<S>, R> queryFunction) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Message> findAll() {
+	public List<Member> findAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Message> findAll(Sort sort) {
+	public List<Member> findAll(Sort sort) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Message> findAllById(Iterable<Integer> ids) {
+	public List<Member> findAllById(Iterable<Integer> ids) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public <S extends Message> List<S> saveAll(Iterable<S> entities) {
+	public <S extends Member> List<S> saveAll(Iterable<S> entities) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -135,19 +135,19 @@ public class MemberRepository implements MemberInterface<Message> {
 	}
 
 	@Override
-	public <S extends Message> S saveAndFlush(S entity) {
+	public <S extends Member> S saveAndFlush(S entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public <S extends Message> List<S> saveAllAndFlush(Iterable<S> entities) {
+	public <S extends Member> List<S> saveAllAndFlush(Iterable<S> entities) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void deleteAllInBatch(Iterable<Message> entities) {
+	public void deleteAllInBatch(Iterable<Member> entities) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -165,31 +165,31 @@ public class MemberRepository implements MemberInterface<Message> {
 	}
 
 	@Override
-	public Message getOne(Integer id) {
+	public Member getOne(Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Message getById(Integer id) {
+	public Member getById(Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Message getReferenceById(Integer id) {
+	public Member getReferenceById(Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public <S extends Message> List<S> findAll(Example<S> example) {
+	public <S extends Member> List<S> findAll(Example<S> example) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public <S extends Message> List<S> findAll(Example<S> example, Sort sort) {
+	public <S extends Member> List<S> findAll(Example<S> example, Sort sort) {
 		// TODO Auto-generated method stub
 		return null;
 	}

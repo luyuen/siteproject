@@ -1,11 +1,13 @@
 package com.tw.videoinagingplatform.Opus.model;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.PrePersist;
 import javax.persistence.Table;
 
 import org.springframework.data.annotation.Id;
@@ -26,18 +28,18 @@ public class Opus implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "OPUS")
 	private int opus_id;
-	
+
 	@Column(name = "OPUS_MEMBER")
 	private String opus_Member;
 
 	@Column(name = "OPUS_DATETIME")
 	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-	private String opus_datetime;
+	private LocalDateTime opus_datetime;
 
 	@Column(name = "OPUS_UPDATETIME")
 	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-	private String opus_updatetime;
-	
+	private LocalDateTime opus_updatetime;
+
 	@Column(name = "opus_audiofile")
 	private String opus_audiofile;
 
@@ -46,6 +48,29 @@ public class Opus implements Serializable {
 
 	@Column(name = "OPUS_PERMISSIONS")
 	private String opus_permissions;
+
+	public Opus() {
+	};
+
+	public Opus(String opus_audiofile, String opus_image, String opus_permissions) {
+		this.opus_audiofile = opus_audiofile;
+		this.opus_image = opus_image;
+		this.opus_permissions = opus_permissions;
+	}
+
+	public Opus(String opus_Member, String opus_audiofile, String opus_image, String opus_permissions) {
+		this.opus_Member = opus_Member;
+		this.opus_audiofile = opus_audiofile;
+		this.opus_image = opus_image;
+		this.opus_permissions = opus_permissions;
+
+	}
+	
+	@PrePersist
+	public void prePersist() {
+		this.opus_datetime = LocalDateTime.now();
+		
+	}
 
 	public int getOpus_id() {
 		return opus_id;
@@ -63,19 +88,19 @@ public class Opus implements Serializable {
 		this.opus_Member = opus_Member;
 	}
 
-	public String getOpus_datetime() {
+	public LocalDateTime getOpus_datetime() {
 		return opus_datetime;
 	}
 
-	public void setOpus_datetime(String opus_datetime) {
+	public void setOpus_datetime(LocalDateTime opus_datetime) {
 		this.opus_datetime = opus_datetime;
 	}
 
-	public String getOpus_updatetime() {
+	public LocalDateTime getOpus_updatetime() {
 		return opus_updatetime;
 	}
 
-	public void setOpus_updatetime(String opus_updatetime) {
+	public void setOpus_updatetime(LocalDateTime opus_updatetime) {
 		this.opus_updatetime = opus_updatetime;
 	}
 
